@@ -11,7 +11,7 @@ import {
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
-
+const BACKEND_URL = "https://web-production-b3b71.up.railway.app";
 const iconMap = {
   "clipboard-list": ClipboardList,
   "target": Target,
