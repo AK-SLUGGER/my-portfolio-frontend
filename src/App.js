@@ -9,9 +9,10 @@ import {
   Layers, Sparkles, MessageSquare
 } from "lucide-react";
 
-
-const API = `${BACKEND_URL}/api`;
 const BACKEND_URL = "https://web-production-b3b71.up.railway.app";
+const API = `${BACKEND_URL}/api`;
+
+
 const iconMap = {
   "clipboard-list": ClipboardList,
   "target": Target,
