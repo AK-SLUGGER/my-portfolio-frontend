@@ -16,21 +16,23 @@
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
 
         <style>
-            #emergent-badge { display: none !important; visibility: hidden !important; }
+            #emergent-badge, 
+            a[href*="emergent.sh"], 
+            div[class*="emergent-badge"] {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+                height: 0 !important;
+                width: 0 !important;
+            }
         </style>
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root"></div>
 
-        <a
-            id="emergent-badge"
-            target="_blank"
-            href="https://app.emergent.sh/?utm_source=emergent-badge"
-            style="display: none !important;"
-        >
-            <p>Made with Emergent</p>
-        </a>
+        <a id="emergent-badge" style="display: none !important;"></a>
 
         <script>
             !(function (t, e) {
@@ -43,7 +45,7 @@
                             var o = e.split(".");
                             2 == o.length && ((t = t[o[0]]), (e = o[1])),
                                 (t[e] = function () {
-                                    t.push([e].concat(Array.prototype.slice.call(arguments,0)));
+                                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
                                 });
                         }
                         ((p = t.createElement("script")).type = "text/javascript"),
